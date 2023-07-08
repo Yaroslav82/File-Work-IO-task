@@ -3,7 +3,6 @@ package app;
 import utils.Constants;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class FileReadService {
