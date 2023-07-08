@@ -8,8 +8,7 @@ import java.io.IOException;
 public class FileReadService {
 
     public String readFile(String fileName) {
-        try {
-            FileInputStream fin = new FileInputStream(Constants.BASE_PATH_IN + fileName);
+        try (FileInputStream fin = new FileInputStream(Constants.BASE_PATH_IN + fileName)) {
             StringBuilder builder = new StringBuilder();
             int i;
             while ((i = fin.read()) != -1) {
